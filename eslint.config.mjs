@@ -9,4 +9,24 @@ export default [
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
+  {
+    rules: {
+      "no-prototype-builtins": "off",
+    },
+    env: {
+      browser: true,
+      es2021: true,
+      node: true,
+    },
+    extends: ["eslin:recommended", "plugi:@typescript-eslint/recommended"],
+    parser: "@typescript-eslint/parser",
+    parserOptions: {
+      ecmaVersion: 12,
+      sourceType: "module",
+    },
+    plugins: ["@typescript-eslint"],
+    rules: {
+      // Add any custom rules here
+    },
+  },
 ];
