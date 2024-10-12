@@ -4,6 +4,8 @@ import addTwoNumbers, {
   arrayToLinkedList,
 } from "./addTwoNumbers/addTwoNumbers";
 import lengthOfLongestSubstring from "./longestSubstringWithoutRepeatingCharacters/longestSubstringWithoutRepeatingCharacters";
+import findMedianSortedArrays from "./medianTwoSortedArrays/medianTwoSortedArrays";
+
 console.log(twoSum([3, 3], 6)); // [0, 1]
 
 // Input: l1 = [2,4,3], l2 = [5,6,4]
@@ -26,3 +28,5 @@ let l2 = arrayToLinkedList([5, 6, 4]);
 console.log(addTwoNumbers(l1, l2)); // ListNode { val: 7, next: ListNode { val: 0, next: ListNode { val: 8, next: null } } }
 
 lengthOfLongestSubstring("anviaj"); // 3
+
+findMedianSortedArrays([1, 3], [2]); // 2
