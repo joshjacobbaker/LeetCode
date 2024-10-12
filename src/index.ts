@@ -5,8 +5,9 @@ import addTwoNumbers, {
 } from "./addTwoNumbers/addTwoNumbers";
 import lengthOfLongestSubstring from "./longestSubstringWithoutRepeatingCharacters/longestSubstringWithoutRepeatingCharacters";
 import findMedianSortedArrays from "./medianTwoSortedArrays/medianTwoSortedArrays";
+import longestPalindrome from "./longestPalindrome/longestPalindrome";
 
-console.log(twoSum([3, 3], 6)); // [0, 1]
+twoSum([3, 3], 6); // [0, 1]
 
 // Input: l1 = [2,4,3], l2 = [5,6,4]
 // Output: [7,0,8]
@@ -25,8 +26,10 @@ let l1 = arrayToLinkedList([
 ]);
 let l2 = arrayToLinkedList([5, 6, 4]);
 
-console.log(addTwoNumbers(l1, l2)); // ListNode { val: 7, next: ListNode { val: 0, next: ListNode { val: 8, next: null } } }
+addTwoNumbers(l1, l2); // ListNode { val: 7, next: ListNode { val: 0, next: ListNode { val: 8, next: null } } }
 
 lengthOfLongestSubstring("anviaj"); // 3
 
 findMedianSortedArrays([1, 3], [2]); // 2
+
+longestPalindrome("babad"); // "bab" or "aba"

@@ -38,16 +38,13 @@ export default function lengthOfLongestSubstring(s: string): number {
     // If the character is found in the current substring
     if (index !== -1) {
       // Remove the part of the substring up to and including the repeated character
-      console.log({ beforeCurrent: current, index, i, char });
       current = current.slice(index + 1);
-      console.log({ afterCurrent: current, index, i, char });
     }
 
     // Add the current character to the substring
     current += char;
     // Update the longest substring length if the current substring is longer
     longest = Math.max(longest, current.length);
-    console.log({ i, char, longest, current, s });
   }
 
   // Return the length of the longest substring without repeating characters
