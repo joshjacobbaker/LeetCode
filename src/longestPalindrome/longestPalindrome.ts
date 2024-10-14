@@ -30,54 +30,24 @@ export default function longestPalindrome(s: string): string {
     right: number,
     oddOrEventlabel: string
   ): void {
-    console.log({ oddOrEventlabel });
     // Expand as long as the characters on both sides are equal
     while (left >= 0 && right < s.length && s[left] === s[right]) {
       left--;
       right++;
-      console.log("inside while", {
-        left,
-        right,
-        sleft: s[left],
-        rleft: s[right],
-      });
     }
 
     // Move back to the last valid palindrome indices
     left++;
     right--;
-    console.log("outside while", {
-      left,
-      right,
-      sleft: s[left],
-      rleft: s[right],
-    });
 
     // Update the start and end indices if a longer palindrome is found
     if (right - left > end - start) {
-      console.log("Left Right Update -- longer palindrome found -- before", {
-        left,
-        right,
-        sleft: s[left],
-        rleft: s[right],
-        start,
-        end,
-      });
       start = left;
       end = right;
-      console.log("Left Right Update -- longer palindrome found -- after", {
-        left,
-        right,
-        sleft: s[left],
-        rleft: s[right],
-        start,
-        end,
-      });
     }
   }
 
   for (let i = 0; i < s.length; i++) {
-    console.log({ i, s, letter: s[i] });
     // Expand around the center assuming the current character is the center of an odd-length palindrome
     expandAroundCenter(i, i, "odd");
 
