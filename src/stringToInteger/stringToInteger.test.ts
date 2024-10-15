@@ -2,36 +2,74 @@ import myAtoi from "./stringToInteger";
 
 describe("myAtoi", () => {
   it("should convert a simple positive number", () => {
-    expect(myAtoi("42")).toBe(42);
+    let argument = "42";
+    let expected = 42;
+    let result = myAtoi(argument);
+    console.log({ argument, result, expected });
+    expect(result).toBe(expected);
   });
 
   it("should convert a simple negative number", () => {
-    expect(myAtoi("-42")).toBe(-42);
+    let argument = "-42";
+    let expected = -42;
+    let result = myAtoi(argument);
+    console.log({ argument, result, expected });
+    expect(result).toBe(expected);
   });
 
   it("should ignore leading whitespace", () => {
-    expect(myAtoi("   42")).toBe(42);
+    let argument = "   42";
+    let expected = 42;
+    let result = myAtoi(argument);
+    console.log({ argument, result, expected });
+    expect(result).toBe(expected);
   });
 
   it("should handle positive sign", () => {
-    expect(myAtoi("+42")).toBe(42);
+    let argument = "+42";
+    let expected = 42;
+    let result = myAtoi(argument);
+    console.log({ argument, result, expected });
+    expect(result).toBe(expected);
   });
 
   it("should return 0 for non-numeric input", () => {
-    expect(myAtoi("abc")).toBe(0);
+    let argument = "abc";
+    let expected = 0;
+    let result = myAtoi(argument);
+    console.log({ argument, result, expected });
+    expect(result).toBe(expected);
   });
 
   it("should handle mixed input with leading numbers", () => {
-    expect(myAtoi("4193 with words")).toBe(4193);
+    let argument = "4193 with words";
+    let expected = 4193;
+    let result = myAtoi(argument);
+    console.log({ argument, result, expected });
+    expect(result).toBe(expected);
   });
 
   it("should handle mixed input with leading words", () => {
-    expect(myAtoi("words and 987")).toBe(0);
+    let argument = "words and 987";
+    let expected = 0;
+    let result = myAtoi(argument);
+    console.log({ argument, result, expected });
+    expect(result).toBe(expected);
   });
 
   it("should handle input with only sign", () => {
-    expect(myAtoi("-")).toBe(0);
-    expect(myAtoi("+")).toBe(0);
+    // Negative case
+    let argument = "-";
+    let expected = 0;
+    let result = myAtoi(argument);
+    console.log({ argument, result, expected });
+    expect(result).toBe(expected);
+    // + case
+    let argument2 = "+";
+    let expected2 = 0;
+    let result2 = myAtoi(argument2);
+    console.log({ argument2, result2, expected2 });
+    expect(result2).toBe(expected2);
   });
 
   it("should handle input with sign and non-numeric characters", () => {
