@@ -93,4 +93,11 @@ describe("myAtoi", () => {
   it("should handle input with only whitespace", () => {
     expect(myAtoi("   ")).toBe(0);
   });
+
+  it("should handle input with sign in the middle", () => {
+    expect(myAtoi("0-1")).toBe(0);
+  });
+  it("should handle input with sign in the middle", () => {
+    expect(myAtoi("+-12")).toBe(0);
+  });
 });
