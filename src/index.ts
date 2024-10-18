@@ -6,6 +6,7 @@ import addTwoNumbers, {
 import lengthOfLongestSubstring from "./longestSubstringWithoutRepeatingCharacters/longestSubstringWithoutRepeatingCharacters";
 import findMedianSortedArrays from "./medianTwoSortedArrays/medianTwoSortedArrays";
 import longestPalindrome from "./longestPalindrome/longestPalindrome";
+import stringToInteger from "./stringToInteger/stringToInteger";
 
 twoSum([3, 3], 6); // [0, 1]
 
@@ -33,3 +34,5 @@ lengthOfLongestSubstring("anviaj"); // 3
 findMedianSortedArrays([1, 3], [2]); // 2
 
 longestPalindrome("babad"); // "bab" or "aba"
+
+stringToInteger("0-1");

@@ -94,7 +94,6 @@ export default function myAtoi(s: string): number {
   // Clamp result to 32-bit signed integer range
 
   const INT_MAX = 2147483647;
-
   const INT_MIN = -2147483648;
 
   if (result > INT_MAX) return INT_MAX;

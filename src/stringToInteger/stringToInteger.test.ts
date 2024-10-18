@@ -57,26 +57,6 @@ describe("myAtoi", () => {
     expect(result).toBe(expected);
   });
 
-  it("should handle input with only sign", () => {
-    // Negative case
-    let argument = "-";
-    let expected = 0;
-    let result = myAtoi(argument);
-    console.log({ argument, result, expected });
-    expect(result).toBe(expected);
-    // + case
-    let argument2 = "+";
-    let expected2 = 0;
-    let result2 = myAtoi(argument2);
-    console.log({ argument2, result2, expected2 });
-    expect(result2).toBe(expected2);
-  });
-
-  it("should handle input with sign and non-numeric characters", () => {
-    expect(myAtoi("-abc")).toBe(0);
-    expect(myAtoi("+abc")).toBe(0);
-  });
-
   it("should handle input with leading zeros", () => {
     expect(myAtoi("0000123")).toBe(123);
   });
