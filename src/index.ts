@@ -7,6 +7,7 @@ import lengthOfLongestSubstring from "./longestSubstringWithoutRepeatingCharacte
 import findMedianSortedArrays from "./medianTwoSortedArrays/medianTwoSortedArrays";
 import longestPalindrome from "./longestPalindrome/longestPalindrome";
 import stringToInteger from "./stringToInteger/stringToInteger";
+import isMatch from "./isMatch/isMatch";
 
 twoSum([3, 3], 6); // [0, 1]
 
@@ -36,3 +37,6 @@ findMedianSortedArrays([1, 3], [2]); // 2
 longestPalindrome("babad"); // "bab" or "aba"
 
 stringToInteger("0-1");
+
+isMatch("aa", "a*"); // true
+isMatch("mississippi", "mis*is*p*.");
