@@ -37,6 +37,4 @@ findMedianSortedArrays([1, 3], [2]); // 2
 longestPalindrome("babad"); // "bab" or "aba"
 
 stringToInteger("0-1");
-
-isMatch("aa", "a*"); // true
-isMatch("mississippi", "mis*is*p*.");
+isMatch("aab", "c*a*b");
