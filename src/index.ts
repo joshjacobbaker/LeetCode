@@ -9,6 +9,7 @@ import longestPalindrome from "./longestPalindrome/longestPalindrome";
 import stringToInteger from "./stringToInteger/stringToInteger";
 import isMatch from "./isMatch/isMatch";
 import intToRoman from "./integerToRoman/integerToRoman";
+import romanToInt from "./romanToInt/romanToInt";
 twoSum([3, 3], 6); // [0, 1]
 
 // Input: l1 = [2,4,3], l2 = [5,6,4]
@@ -39,3 +40,4 @@ longestPalindrome("babad"); // "bab" or "aba"
 stringToInteger("0-1");
 isMatch("aab", "c*a*b");
 intToRoman(58);
+romanToInt("MCMXCIV");
