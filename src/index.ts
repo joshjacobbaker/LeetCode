@@ -10,6 +10,7 @@ import stringToInteger from "./stringToInteger/stringToInteger";
 import isMatch from "./isMatch/isMatch";
 import intToRoman from "./integerToRoman/integerToRoman";
 import romanToInt from "./romanToInt/romanToInt";
+import longestCommonPrefix from "./longestCommonPrefix/longestCommonPrefix";
 twoSum([3, 3], 6); // [0, 1]
 
 // Input: l1 = [2,4,3], l2 = [5,6,4]
@@ -41,3 +42,5 @@ stringToInteger("0-1");
 isMatch("aab", "c*a*b");
 intToRoman(58);
 romanToInt("MCMXCIV");
+// longestCommonPrefix(["flower", "flow", "flight"]); // "fl"
+longestCommonPrefix(["ab", "a"]); // a
