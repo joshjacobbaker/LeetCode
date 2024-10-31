@@ -12,6 +12,7 @@ import intToRoman from "./integerToRoman/integerToRoman";
 import romanToInt from "./romanToInt/romanToInt";
 import longestCommonPrefix from "./longestCommonPrefix/longestCommonPrefix";
 import letterCombinations from "./letterCombination/letterCombinations";
+import removeNthFromEnd from "./removeNthNodeFromEndOfList/removeNthNodeFromEndOfList";
 twoSum([3, 3], 6); // [0, 1]
 
 // Input: l1 = [2,4,3], l2 = [5,6,4]
@@ -47,3 +48,4 @@ romanToInt("MCMXCIV");
 longestCommonPrefix(["ab", "a"]); // a
 
 letterCombinations("23");
+removeNthFromEnd(nodeA1, 2);
