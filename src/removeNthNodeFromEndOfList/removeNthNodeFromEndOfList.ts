@@ -13,7 +13,7 @@ export default function removeNthFromEnd(
   n: number
 ): ListNode | null {
   if (head === null) return null;
-˝
+
   // Get the length of the linked list
   let length = 0;
   let current: ListNode | null = head;
@@ -38,19 +38,22 @@ export default function removeNthFromEnd(
   return head;
 }
 
-function removeNthFromEndLeetCode(head: ListNode | null, n: number): ListNode | null {
-    let fastP: ListNode | null = head
-    let slowP: ListNode | null = head
-    for (let i = 0; i < n; i++) {
-        fastP = fastP!.next;
-    }
-    if (!fastP) return head!.next;
+function removeNthFromEndLeetCode(
+  head: ListNode | null,
+  n: number
+): ListNode | null {
+  let fastP: ListNode | null = head;
+  let slowP: ListNode | null = head;
+  for (let i = 0; i < n; i++) {
+    fastP = fastP!.next;
+  }
+  if (!fastP) return head!.next;
 
-    while (fastP.next) {
-        fastP = fastP.next
-        slowP = slowP!.next;
-    }
-    slowP!.next = slowP!.next!.next;
+  while (fastP.next) {
+    fastP = fastP.next;
+    slowP = slowP!.next;
+  }
+  slowP!.next = slowP!.next!.next;
 
-    return head
-};
+  return head;
+}
