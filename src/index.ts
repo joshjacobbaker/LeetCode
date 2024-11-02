@@ -14,6 +14,7 @@ import longestCommonPrefix from "./longestCommonPrefix/longestCommonPrefix";
 import letterCombinations from "./letterCombination/letterCombinations";
 import removeNthFromEnd from "./removeNthNodeFromEndOfList/removeNthNodeFromEndOfList";
 import isValid from "./isValidParentheses/isValidParentheses";
+import mergeTwoLists from "./mergeTwoSortedLists/mergeTwoSortedList";
 
 twoSum([3, 3], 6); // [0, 1]
 
@@ -52,3 +53,4 @@ longestCommonPrefix(["ab", "a"]); // a
 letterCombinations("23");
 removeNthFromEnd(nodeA1, 2);
 isValid("()[]{}");
+mergeTwoLists(nodeA1, nodeB1);
