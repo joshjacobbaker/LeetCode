@@ -15,6 +15,7 @@ import letterCombinations from "./letterCombination/letterCombinations";
 import removeNthFromEnd from "./removeNthNodeFromEndOfList/removeNthNodeFromEndOfList";
 import isValid from "./isValidParentheses/isValidParentheses";
 import mergeTwoLists from "./mergeTwoSortedLists/mergeTwoSortedList";
+import generateParenthesis from "./generateParenthesis/generateParenthesis";
 
 twoSum([3, 3], 6); // [0, 1]
 
@@ -54,3 +55,4 @@ letterCombinations("23");
 removeNthFromEnd(nodeA1, 2);
 isValid("()[]{}");
 mergeTwoLists(nodeA1, nodeB1);
+generateParenthesis(3);
