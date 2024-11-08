@@ -16,19 +16,23 @@ import removeNthFromEnd from "./removeNthNodeFromEndOfList/removeNthNodeFromEndO
 import isValid from "./isValidParentheses/isValidParentheses";
 import mergeTwoLists from "./mergeTwoSortedLists/mergeTwoSortedList";
 import generateParenthesis from "./generateParenthesis/generateParenthesis";
-
+import mergeKLists from "./mergeKLists/mergeKLists";
 twoSum([3, 3], 6); // [0, 1]
 
 // Input: l1 = [2,4,3], l2 = [5,6,4]
 // Output: [7,0,8]
 // Explanation: 342 + 465 = 807.
-const nodeA3 = new ListNode(3, null);
+const nodeA3 = new ListNode(5, null);
 const nodeA2 = new ListNode(4, nodeA3);
 const nodeA1 = new ListNode(2, nodeA2);
 
 const nodeB3 = new ListNode(4, null);
-const nodeB2 = new ListNode(6, nodeB3);
-const nodeB1 = new ListNode(5, nodeB2);
+const nodeB2 = new ListNode(3, nodeB3);
+const nodeB1 = new ListNode(1, nodeB2);
+
+const nodeC3 = new ListNode(6, null);
+const nodeC2 = new ListNode(3, nodeC3);
+const nodeC1 = new ListNode(2, nodeC2);
 
 let l1 = arrayToLinkedList([
   1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -54,5 +58,6 @@ longestCommonPrefix(["ab", "a"]); // a
 letterCombinations("23");
 removeNthFromEnd(nodeA1, 2);
 isValid("()[]{}");
-mergeTwoLists(nodeA1, nodeB1);
+// mergeTwoLists(nodeA1, nodeB1);
 generateParenthesis(3);
+mergeKLists([nodeA1, nodeB1, nodeC1]);

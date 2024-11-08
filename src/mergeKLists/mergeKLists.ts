@@ -1,3 +1,5 @@
+import mergeTwoSortedList from "../mergeTwoSortedLists/mergeTwoSortedList";
+
 //  Definition for singly-linked list.
 class ListNode {
   val: number;
@@ -8,48 +10,55 @@ class ListNode {
   }
 }
 
-function mergeKLists(lists: Array<ListNode | null>): ListNode | null {
-  let head: ListNode | null = new ListNode();
-  let current: ListNode | null = new ListNode();
-  let left: ListNode | null = head;
-  let right: ListNode | null = null;
-  for (let i = 0; i < lists.length; i++) {
-    left = lists[i];
-    right = lists[lists.length - i];
+export default function mergeKLists(
+  lists: Array<ListNode | null>
+): ListNode | null {
+  const pairwiseMergedLists: Array<ListNode | null> = [];
 
-    while (left && right) {
-      if (left.val < right.val) {
-        current.next = left;
-        left = left.next;
-      } else {
-        current.next = right;
-        right = right.next;
-      }
-      current = current.next;
+  while (lists.length > 1) {
+    for (let i = 0; i < lists.length; i += 2) {
+      const list1: ListNode | null = lists[i];
+      const list2: ListNode | null = lists[i + 1] || null;
+      pairwiseMergedLists.push(merge2Lists(list1, list2));
     }
-
-    if (left) {
-      current.next = left;
-    } else {
-      current.next = right;
-    }
+    lists = pairwiseMergedLists;
   }
-  return head.next;
+
+  return lists[0] || null;
+}
+
+function merge2Lists(
+  list1: ListNode | null,
+  list2: ListNode | null
+): ListNode | null {
+  // a dummy node serves to simplify the logic and cover edge cases
+  // and to maintain a reference to the start of the list
+  // {val: NaN, next: result}
+  const dummyNode: ListNode = new ListNode(NaN);
+  // handles the actual merging process
+  let head: ListNode = dummyNode;
+
+  // iterate through both lists
+  // attach the smaller value
+  while (list1 && list2) {
+    if (list1.val < list2.val) {
+      head.next = list1;
+      list1 = list1.next;
+    } else {
+      head.next = list2;
+      list2 = list2.next;
+    }
+
+    head = head.next;
+  }
+
+  // add what's left
+  head.next = list1 || list2;
+
+  return dummyNode.next;
 }
 
 // Leet Code Solution
-
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     val: number
- *     next: ListNode | null
- *     constructor(val?: number, next?: ListNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.next = (next===undefined ? null : next)
- *     }
- * }
- */
 
 function mergeKListsLeetCode(lists: Array<ListNode | null>): ListNode | null {
   const data = lists.map((l) => getListAsArray(l));
