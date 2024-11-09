@@ -96,3 +96,28 @@ function getArrayAsListArray(numbers: number[]): ListNode | null {
   }
   return list;
 }
+
+function mergeKListsLeetCodeTwo(
+  lists: Array<ListNode | null>
+): ListNode | null {
+  if (!lists.length) return null;
+
+  let min = Infinity;
+  let index = 0;
+  let response: ListNode | null = null;
+
+  for (let i = 0; i < lists.length; i++) {
+    if (!lists[i]) continue;
+    if (lists[i].val < min) {
+      min = lists[i].val;
+      index = i;
+    }
+  }
+
+  if (min === Infinity) return response;
+  lists[index] = lists[index].next;
+  response = new ListNode(min, mergeKLists(lists));
+
+  console.log(lists);
+  return response;
+}
