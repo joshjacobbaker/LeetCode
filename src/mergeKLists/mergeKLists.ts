@@ -10,57 +10,7 @@ class ListNode {
   }
 }
 
-export default function mergeKLists(
-  lists: Array<ListNode | null>
-): ListNode | null {
-  const pairwiseMergedLists: Array<ListNode | null> = [];
-
-  while (lists.length > 1) {
-    for (let i = 0; i < lists.length; i += 2) {
-      const list1: ListNode | null = lists[i];
-      const list2: ListNode | null = lists[i + 1] || null;
-      pairwiseMergedLists.push(merge2Lists(list1, list2));
-    }
-    lists = pairwiseMergedLists;
-  }
-
-  return lists[0] || null;
-}
-
-function merge2Lists(
-  list1: ListNode | null,
-  list2: ListNode | null
-): ListNode | null {
-  // a dummy node serves to simplify the logic and cover edge cases
-  // and to maintain a reference to the start of the list
-  // {val: NaN, next: result}
-  const dummyNode: ListNode = new ListNode(NaN);
-  // handles the actual merging process
-  let head: ListNode = dummyNode;
-
-  // iterate through both lists
-  // attach the smaller value
-  while (list1 && list2) {
-    if (list1.val < list2.val) {
-      head.next = list1;
-      list1 = list1.next;
-    } else {
-      head.next = list2;
-      list2 = list2.next;
-    }
-
-    head = head.next;
-  }
-
-  // add what's left
-  head.next = list1 || list2;
-
-  return dummyNode.next;
-}
-
-// Leet Code Solution
-
-function mergeKListsLeetCode(lists: Array<ListNode | null>): ListNode | null {
+function mergeKLists(lists: Array<ListNode | null>): ListNode | null {
   const data = lists.map((l) => getListAsArray(l));
   const mergedData = data
     .reduce((acc, val) => acc.concat(val), [])
@@ -68,7 +18,7 @@ function mergeKListsLeetCode(lists: Array<ListNode | null>): ListNode | null {
   return getArrayAsListArray(mergedData);
 }
 
-function getListAsArray(list: ListNode | null): number[] {
+function getListAsArray(list: ListNode | undefined): number[] {
   const array: number[] = [];
   while (list) {
     array.push(list.val);
@@ -77,7 +27,10 @@ function getListAsArray(list: ListNode | null): number[] {
   return array;
 }
 
-function append(list: ListNode | null, value: number): ListNode | null {
+function append(
+  list: ListNode | undefined,
+  value: number
+): ListNode | undefined {
   if (!list) {
     return { val: value, next: null };
   }
@@ -89,35 +42,10 @@ function append(list: ListNode | null, value: number): ListNode | null {
   return list;
 }
 
-function getArrayAsListArray(numbers: number[]): ListNode | null {
-  let list: ListNode | null = null;
+function getArrayAsListArray(numbers: number[]): ListNode | undefined {
+  let list: ListNode | undefined = null;
   for (const value of numbers) {
     list = append(list, value);
   }
   return list;
-}
-
-function mergeKListsLeetCodeTwo(
-  lists: Array<ListNode | null>
-): ListNode | null {
-  if (!lists.length) return null;
-
-  let min = Infinity;
-  let index = 0;
-  let response: ListNode | null = null;
-
-  for (let i = 0; i < lists.length; i++) {
-    if (!lists[i]) continue;
-    if (lists[i].val < min) {
-      min = lists[i].val;
-      index = i;
-    }
-  }
-
-  if (min === Infinity) return response;
-  lists[index] = lists[index].next;
-  response = new ListNode(min, mergeKLists(lists));
-
-  console.log(lists);
-  return response;
 }
