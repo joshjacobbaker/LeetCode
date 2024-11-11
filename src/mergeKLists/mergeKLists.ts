@@ -1,5 +1,3 @@
-import mergeTwoSortedList from "../mergeTwoSortedLists/mergeTwoSortedList";
-
 //  Definition for singly-linked list.
 class ListNode {
   val: number;
@@ -18,7 +16,7 @@ function mergeKLists(lists: Array<ListNode | null>): ListNode | null {
   return getArrayAsListArray(mergedData);
 }
 
-function getListAsArray(list: ListNode | undefined): number[] {
+function getListAsArray(list: ListNode | null): number[] {
   const array: number[] = [];
   while (list) {
     array.push(list.val);
@@ -27,10 +25,7 @@ function getListAsArray(list: ListNode | undefined): number[] {
   return array;
 }
 
-function append(
-  list: ListNode | undefined,
-  value: number
-): ListNode | undefined {
+function append(list: ListNode | null, value: number): ListNode | null {
   if (!list) {
     return { val: value, next: null };
   }
@@ -42,8 +37,8 @@ function append(
   return list;
 }
 
-function getArrayAsListArray(numbers: number[]): ListNode | undefined {
-  let list: ListNode | undefined = null;
+function getArrayAsListArray(numbers: number[]): ListNode | null {
+  let list: ListNode | null = null;
   for (const value of numbers) {
     list = append(list, value);
   }
