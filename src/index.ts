@@ -16,12 +16,9 @@ import removeNthFromEnd from "./removeNthNodeFromEndOfList/removeNthNodeFromEndO
 import isValid from "./isValidParentheses/isValidParentheses";
 import mergeTwoLists from "./mergeTwoSortedLists/mergeTwoSortedList";
 import generateParenthesis from "./generateParenthesis/generateParenthesis";
-import mergeKLists from "./mergeKLists/mergeKLists";
+import { mergeKLists } from "./mergeKLists/mergeKLists";
 twoSum([3, 3], 6); // [0, 1]
 
-// Input: l1 = [2,4,3], l2 = [5,6,4]
-// Output: [7,0,8]
-// Explanation: 342 + 465 = 807.
 const nodeA3 = new ListNode(5, null);
 const nodeA2 = new ListNode(4, nodeA3);
 const nodeA1 = new ListNode(2, nodeA2);
@@ -41,23 +38,16 @@ let l1 = arrayToLinkedList([
 let l2 = arrayToLinkedList([5, 6, 4]);
 
 addTwoNumbers(l1, l2); // ListNode { val: 7, next: ListNode { val: 0, next: ListNode { val: 8, next: null } } }
-
 lengthOfLongestSubstring("anviaj"); // 3
-
 findMedianSortedArrays([1, 3], [2]); // 2
-
 longestPalindrome("babad"); // "bab" or "aba"
-
 stringToInteger("0-1");
 isMatch("aab", "c*a*b");
 intToRoman(58);
 romanToInt("MCMXCIV");
-// longestCommonPrefix(["flower", "flow", "flight"]); // "fl"
 longestCommonPrefix(["ab", "a"]); // a
-
 letterCombinations("23");
 removeNthFromEnd(nodeA1, 2);
 isValid("()[]{}");
-// mergeTwoLists(nodeA1, nodeB1);
 generateParenthesis(3);
 mergeKLists([nodeA1, nodeB1, nodeC1]);
