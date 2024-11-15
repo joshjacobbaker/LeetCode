@@ -37,15 +37,15 @@ let l1 = arrayToLinkedList([
 ]);
 let l2 = arrayToLinkedList([5, 6, 4]);
 
-addTwoNumbers(l1, l2); // ListNode { val: 7, next: ListNode { val: 0, next: ListNode { val: 8, next: null } } }
-lengthOfLongestSubstring("anviaj"); // 3
-findMedianSortedArrays([1, 3], [2]); // 2
-longestPalindrome("babad"); // "bab" or "aba"
+addTwoNumbers(l1, l2);
+lengthOfLongestSubstring("anviaj");
+findMedianSortedArrays([1, 3], [2]);
+longestPalindrome("babad");
 stringToInteger("0-1");
 isMatch("aab", "c*a*b");
 intToRoman(58);
 romanToInt("MCMXCIV");
-longestCommonPrefix(["ab", "a"]); // a
+longestCommonPrefix(["ab", "a"]);
 letterCombinations("23");
 removeNthFromEnd(nodeA1, 2);
 isValid("()[]{}");
