@@ -17,7 +17,7 @@ import isValid from "./isValidParentheses/isValidParentheses";
 import mergeTwoLists from "./mergeTwoSortedLists/mergeTwoSortedList";
 import generateParenthesis from "./generateParenthesis/generateParenthesis";
 import { mergeKLists } from "./mergeKLists/mergeKLists";
-twoSum([3, 3], 6); // [0, 1]
+twoSum([3, 3], 6);
 
 const nodeA3 = new ListNode(5, null);
 const nodeA2 = new ListNode(4, nodeA3);
