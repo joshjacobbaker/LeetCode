@@ -57,3 +57,4 @@ mergeKLists([nodeA1, nodeB1, nodeC1]);
 // TODO WEDNESDAY: Implement isValid
 // TODO THURSDAY: Implement removeNthFromEnd
 // TODO FRIDAY: Implement letterCombinations
+// TODO SATURDAY: Implement longestCommonPrefix
