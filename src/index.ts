@@ -58,3 +58,4 @@ mergeKLists([nodeA1, nodeB1, nodeC1]);
 // TODO THURSDAY: Implement removeNthFromEnd
 // TODO FRIDAY: Implement letterCombinations
 // TODO SATURDAY: Implement longestCommonPrefix
+// TODO SUNDAY: Implement algorithm of choice
