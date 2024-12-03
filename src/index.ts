@@ -66,3 +66,4 @@ mergeKLists([nodeA1, nodeB1, nodeC1]);
 // TODO FRIDAY: Implement longestPalindrome
 // TODO SATURDAY: Implement findMedianSortedArrays
 // TODO SUNDAY: Implement lengthOfLongestSubstring
+// TODO MONDAY: Implement addTwoNumbers
