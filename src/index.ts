@@ -70,3 +70,4 @@ mergeKLists([nodeA1, nodeB1, nodeC1]);
 // TODO TUESDAY: Implement twoSum
 // TODO WEDNESDAY: Implement mergeTwoLists
 // TODO THURSDAY: Implement mergeKLists
+// TODO FRIDAY: Implement generateParenthesis
