@@ -72,3 +72,4 @@ mergeKLists([nodeA1, nodeB1, nodeC1]);
 // TODO THURSDAY: Implement mergeKLists
 // TODO FRIDAY: Implement generateParenthesis
 // TODO SATURDAY: Implement isValid
+// TODO SUNDAY: Implement removeNthFromEnd
