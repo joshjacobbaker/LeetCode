@@ -17,6 +17,8 @@ import isValid from "./isValidParentheses/isValidParentheses";
 import mergeTwoLists from "./mergeTwoSortedLists/mergeTwoSortedList";
 import generateParenthesis from "./generateParenthesis/generateParenthesis";
 import { mergeKLists } from "./mergeKLists/mergeKLists";
+import removeDuplicates from "./removeDuplicates/removeDuplicates";
+
 twoSum([3, 3], 6);
 
 const nodeA3 = new ListNode(5, null);
@@ -51,28 +53,4 @@ removeNthFromEnd(nodeA1, 2);
 isValid("()[]{}");
 generateParenthesis(3);
 mergeKLists([nodeA1, nodeB1, nodeC1]);
-// TODO: Implement mergeTwoLists
-// TODO MONDAY: Implement mergeKLists
-// TODO TUESDAY: Implement generateParenthesis
-// TODO WEDNESDAY: Implement isValid
-// TODO THURSDAY: Implement removeNthFromEnd
-// TODO FRIDAY: Implement letterCombinations
-// TODO SATURDAY: Implement longestCommonPrefix
-// TODO SUNDAY: Implement algorithm of choice
-// TODO MONDAY: Implement romanToInt
-// TODO TUESDAY: Implement intToRoman
-// TODO WEDNESDAY: Implement isMatch
-// TODO THURSDAY: Implement stringToInteger
-// TODO FRIDAY: Implement longestPalindrome
-// TODO SATURDAY: Implement findMedianSortedArrays
-// TODO SUNDAY: Implement lengthOfLongestSubstring
-// TODO MONDAY: Implement addTwoNumbers
-// TODO TUESDAY: Implement twoSum
-// TODO WEDNESDAY: Implement mergeTwoLists
-// TODO THURSDAY: Implement mergeKLists
-// TODO FRIDAY: Implement generateParenthesis
-// TODO SATURDAY: Implement isValid
-// TODO SUNDAY: Implement removeNthFromEnd
-// TODO MONDAY: Implement letterCombinations
-// TODO TUESDAY: Implement longestCommonPrefix
-// TODO WEDNESDAY: Implement romanToInt
+removeDuplicates([1, 1, 2, 3, 2, 4, 3, 1, 5]);
